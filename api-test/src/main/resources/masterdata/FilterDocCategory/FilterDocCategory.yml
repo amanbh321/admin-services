@@ -7,6 +7,7 @@ FilterDocCategory:
       checkErrorsOnlyInResponse: true
       templateFields: ["text"]
       restMethod: post
+      additionalDependencies: TC_Masterdata_CreateDocumentCategory_01
       inputTemplate: masterdata/FilterDocCategory/filterDocCategory
       outputTemplate: masterdata/FilterDocCategory/filterDocCategoryResult
       input: '{
@@ -28,6 +29,7 @@ FilterDocCategory:
       checkErrorsOnlyInResponse: true
       templateFields: ["text"]
       restMethod: post
+      additionalDependencies: TC_Masterdata_CreateDocumentCategory_01
       inputTemplate: masterdata/FilterDocCategory/filterDocCategory
       outputTemplate: masterdata/FilterDocCategory/filterDocCategoryResult
       input: '{

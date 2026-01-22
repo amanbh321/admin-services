@@ -7,6 +7,7 @@ FetchBlockListedWordByLangcode:
       checkErrorsOnlyInResponse: true
       templateFields: ["langCode"]
       restMethod: get
+      additionalDependencies: TC_Masterdata_CreateBlockListedWords_01
       inputTemplate: masterdata/FetchBlockListedWordByLangcode/fetchBlockListedWordByLangcode
       outputTemplate: masterdata/FetchBlockListedWordByLangcode/fetchBlockListedWordByLangcodeResult
       input: '{
