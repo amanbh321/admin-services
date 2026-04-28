@@ -26,6 +26,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithUserDetails;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -509,6 +510,8 @@ public class RegistrationCenterControllerTest {
 	}
 	
 	@Test
+	@Sql(statements = "DELETE FROM master.user_detail WHERE regcntr_id='10003'",
+	executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 	@WithUserDetails("global-admin")
 	public void decommissionRegCenterFail_WithMappedRegCenter() throws Exception {
 
